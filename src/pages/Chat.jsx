@@ -9,8 +9,8 @@ import io from "socket.io-client"
 import "./home.css"
 import { fetchChats, setNotifications } from '../redux/chatsSlice';
 import Loading from '../components/ui/Loading';
-import data from '@emoji-mart/data'
-import Picker from '@emoji-mart/react'
+// import data from '@emoji-mart/data'
+// import Picker from '@emoji-mart/react'
 import { getChatName } from '../utils/logics';
 import Typing from '../components/ui/Typing';
 import { validUser } from '../apis/auth';
@@ -128,7 +128,8 @@ function Chat(props) {
             </div>
             <div className="absolute bottom-[8%] w-full px-4">
               {showPicker && (
-                <Picker data={data} onEmojiSelect={(e) => setMessage(message + e.native)} />
+                <></>
+                // <Picker data={data} onEmojiSelect={(e) => setMessage(message + e.native)} />
               )}
               <div className="border border-[#aabac8] px-6 py-3 w-full rounded-t-[10px] bg-white">
                 <form

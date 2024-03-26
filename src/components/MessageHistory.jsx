@@ -1,16 +1,16 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import ScrollableFeed from "react-scrollable-feed"
-import { isSameSender, isSameSenderMargin, isSameUser, isLastMessage } from '../utils/logics'
+// import { useSelector } from 'react-redux'
+// import ScrollableFeed from "react-scrollable-feed"
+// import { isSameSender, isSameSenderMargin, isSameUser, isLastMessage } from '../utils/logics'
 // import { Tooltip } from "@chakra-ui/tooltip";
 // import { Avatar } from "@chakra-ui/avatar";
 import "../pages/home.css"
 function MessageHistory({ messages }) {
-  const activeUser = useSelector((state) => state.activeUser)
+  // const activeUser = useSelector((state) => state.activeUser)
 
   return (
     <>
-      <ScrollableFeed className='scrollbar-hide'>
+      {/* <ScrollableFeed className='scrollbar-hide'>
         {messages &&
           messages.map((m, i) => (
 
@@ -49,7 +49,7 @@ function MessageHistory({ messages }) {
           ))
         }
 
-      </ScrollableFeed >
+      </ScrollableFeed > */}
     </>
   )
 }
