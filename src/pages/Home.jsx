@@ -20,7 +20,7 @@ import { Effect } from "react-notification-badge"
 // import NotificationBadge from 'react-notification-badge/lib/components/NotificationBadge';
 import NotificationBadge from 'react-notification-badge';
 import Search from '../components/group/Search'
-import logo from '../assets/logo.png'
+// import logo from '../assets/logo.png'
 import { GrUserSettings } from "react-icons/gr";
 
 function Home() {

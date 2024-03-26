@@ -1,8 +1,8 @@
 import React from 'react'
 import { useEffect } from 'react'
-import { GoogleLogin } from "react-google-login"
+// import { GoogleLogin } from "react-google-login"
 import { gapi } from "gapi-script"
-import { googleAuth } from '../apis/auth'
+// import { googleAuth } from '../apis/auth'
 import { useState } from 'react'
 import { loginUser } from '../apis/auth'
 import { Link, useNavigate } from 'react-router-dom'
@@ -19,24 +19,24 @@ function Login() {
   const [isLoading, setIsLoading] = useState(false)
   const [showPass, setShowPass] = useState(false)
   const pageRoute = useNavigate()
-  const googleSuccess = async (res) => {
-    if (res?.profileObj) {
-      console.log(res.profileObj)
-      setIsLoading(true)
-      const response = await googleAuth({ tokenId: res.tokenId })
-      setIsLoading(false)
+  // const googleSuccess = async (res) => {
+  //   if (res?.profileObj) {
+  //     console.log(res.profileObj)
+  //     setIsLoading(true)
+  //     const response = await googleAuth({ tokenId: res.tokenId })
+  //     setIsLoading(false)
 
-      console.log("response :" + res)
-      if (response.data.token) {
-        localStorage.setItem("userToken", response.data.token)
-        pageRoute("/chats")
+  //     console.log("response :" + res)
+  //     if (response.data.token) {
+  //       localStorage.setItem("userToken", response.data.token)
+  //       pageRoute("/chats")
 
-      }
-    }
-  }
-  const googleFailure = (error) => {
-    // toast.error("Something went Wrong.Try Again!")
-  }
+  //     }
+  //   }
+  // }
+  // const googleFailure = (error) => {
+  //   // toast.error("Something went Wrong.Try Again!")
+  // }
   const handleOnChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
